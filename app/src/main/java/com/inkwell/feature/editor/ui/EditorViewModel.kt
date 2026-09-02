@@ -6,7 +6,7 @@ import com.inkwell.core.data.repository.model.Chapter
 import com.inkwell.core.data.repository.model.Novel
 import com.inkwell.core.data.repository.ChapterRepository
 import com.inkwell.core.data.repository.NovelRepository
-import com.inkwell.core.data.repository.PreferencesManager
+import com.inkwell.core.data.local.PreferencesManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
