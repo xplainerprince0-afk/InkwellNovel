@@ -15,6 +15,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inkwell.core.data.repository.model.WorldNote
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WorldScreen(
     onNavigateBack: () -> Unit,
