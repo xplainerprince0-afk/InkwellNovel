@@ -2,9 +2,10 @@ package com.inkwell.feature.world.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Globe
+import androidx.compose.material.icons.filled.Place
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -35,7 +36,7 @@ fun WorldScreen(
                 contentAlignment = Alignment.Center
             ) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Icon(Icons.Default.Globe, contentDescription = null, modifier = Modifier.padding(32.dp))
+                    Icon(Icons.Default.Place, contentDescription = null, modifier = Modifier.padding(32.dp))
                     Text("No world notes yet", style = MaterialTheme.typography.headlineSmall)
                 }
             }
@@ -45,14 +46,19 @@ fun WorldScreen(
                 contentPadding = PaddingValues(16.dp)
             ) {
                 items(uiState.notes, key = { it.id }) { note ->
-                    Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Text(note.title, style = MaterialTheme.typography.titleMedium)
-                            Text(note.content, style = MaterialTheme.typography.bodyMedium)
-                        }
-                    }
+                    WorldNoteCard(note)
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun WorldNoteCard(note: WorldNote) {
+    Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(note.title, style = MaterialTheme.typography.titleMedium)
+            Text(note.content, style = MaterialTheme.typography.bodyMedium)
         }
     }
 }
