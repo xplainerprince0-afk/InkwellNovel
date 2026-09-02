@@ -64,7 +64,7 @@ fun ChapterListSheet(
     var draggedItemIndex by remember { mutableStateOf<Int?>(null) }
 
     val chaptersListDescription = stringResource(
-        com.inkwell.core.ui.R.string.chapter_list_description,
+        com.inkwell.feature.characters.ui.R.string.chapter_list_description,
         chapters.size
     )
 
@@ -86,7 +86,7 @@ fun ChapterListSheet(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = stringResource(com.inkwell.core.ui.R.string.chapters),
+                    text = stringResource(com.inkwell.feature.characters.ui.R.string.chapters),
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Bold
                 )
@@ -99,7 +99,7 @@ fun ChapterListSheet(
                         }
                     },
                     modifier = Modifier.semantics {
-                        contentDescription = stringResource(com.inkwell.core.ui.R.string.add_chapter)
+                        contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.add_chapter)
                     }
                 ) {
                     Icon(
@@ -113,7 +113,7 @@ fun ChapterListSheet(
 
             if (chapters.isEmpty()) {
                 Text(
-                    text = stringResource(com.inkwell.core.ui.R.string.no_chapters),
+                    text = stringResource(com.inkwell.feature.characters.ui.R.string.no_chapters),
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -161,7 +161,7 @@ fun ChapterListSheet(
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.close))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.close))
             }
         }
     }
@@ -184,10 +184,10 @@ private fun ChapterItem(
     }
 
     val contentDescription = stringResource(
-        com.inkwell.core.ui.R.string.chapter_item_description,
+        com.inkwell.feature.characters.ui.R.string.chapter_item_description,
         chapter.title,
         chapter.wordCount,
-        if (isSelected) stringResource(com.inkwell.core.ui.R.string.currently_selected) else ""
+        if (isSelected) stringResource(com.inkwell.feature.characters.ui.R.string.currently_selected) else ""
     )
 
     Row(
@@ -204,7 +204,7 @@ private fun ChapterItem(
     ) {
         Icon(
             imageVector = Icons.Default.DragHandle,
-            contentDescription = stringResource(com.inkwell.core.ui.R.string.drag_to_reorder),
+            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.drag_to_reorder),
             modifier = Modifier
                 .size(24.dp)
                 .clickable {
@@ -225,7 +225,7 @@ private fun ChapterItem(
                 overflow = TextOverflow.Ellipsis
             )
             Text(
-                text = stringResource(com.inkwell.core.ui.R.string.word_count, chapter.wordCount),
+                text = stringResource(com.inkwell.feature.characters.ui.R.string.word_count, chapter.wordCount),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -235,7 +235,7 @@ private fun ChapterItem(
             onClick = onDeleteChapter,
             modifier = Modifier.semantics {
                 contentDescription = stringResource(
-                    com.inkwell.core.ui.R.string.delete_chapter,
+                    com.inkwell.feature.characters.ui.R.string.delete_chapter,
                     chapter.title
                 )
             }

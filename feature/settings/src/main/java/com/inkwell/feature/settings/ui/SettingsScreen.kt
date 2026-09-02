@@ -55,13 +55,13 @@ fun SettingsScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.settings))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.settings))
                 },
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -82,11 +82,11 @@ fun SettingsScreen(
                 .padding(paddingValues)
                 .verticalScroll(rememberScrollState())
                 .semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.settings_screen_description)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.settings_screen_description)
                 }
         ) {
             SettingsSection(
-                title = stringResource(com.inkwell.core.ui.R.string.appearance_section)
+                title = stringResource(com.inkwell.feature.characters.ui.R.string.appearance_section)
             ) {
                 DarkModeSetting(
                     isDarkMode = uiState.isDarkMode,
@@ -107,7 +107,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             SettingsSection(
-                title = stringResource(com.inkwell.core.ui.R.string.writing_section)
+                title = stringResource(com.inkwell.feature.characters.ui.R.string.writing_section)
             ) {
                 DailyWordGoalSetting(
                     goal = uiState.dailyWordGoal,
@@ -123,7 +123,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             SettingsSection(
-                title = stringResource(com.inkwell.core.ui.R.string.security_section)
+                title = stringResource(com.inkwell.feature.characters.ui.R.string.security_section)
             ) {
                 BiometricSetting(
                     isEnabled = uiState.isBiometricEnabled,
@@ -134,7 +134,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             SettingsSection(
-                title = stringResource(com.inkwell.core.ui.R.string.account_section)
+                title = stringResource(com.inkwell.feature.characters.ui.R.string.account_section)
             ) {
                 AccountSetting(
                     userName = uiState.userName,
@@ -145,7 +145,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             SettingsSection(
-                title = stringResource(com.inkwell.core.ui.R.string.about_section)
+                title = stringResource(com.inkwell.feature.characters.ui.R.string.about_section)
             ) {
                 AboutSetting(appVersion = uiState.appVersion)
             }
@@ -187,13 +187,13 @@ private fun DarkModeSetting(
     modifier: Modifier = Modifier
 ) {
     val darkModeDescription = stringResource(
-        com.inkwell.core.ui.R.string.dark_mode_description,
-        if (isDarkMode) stringResource(com.inkwell.core.ui.R.string.enabled) else stringResource(com.inkwell.core.ui.R.string.disabled)
+        com.inkwell.feature.characters.ui.R.string.dark_mode_description,
+        if (isDarkMode) stringResource(com.inkwell.feature.characters.ui.R.string.enabled) else stringResource(com.inkwell.feature.characters.ui.R.string.disabled)
     )
 
     SettingItem(
-        title = stringResource(com.inkwell.core.ui.R.string.dark_mode),
-        description = stringResource(com.inkwell.core.ui.R.string.dark_mode_subtitle),
+        title = stringResource(com.inkwell.feature.characters.ui.R.string.dark_mode),
+        description = stringResource(com.inkwell.feature.characters.ui.R.string.dark_mode_subtitle),
         modifier = modifier.semantics {
             contentDescription = darkModeDescription
         }
@@ -212,7 +212,7 @@ private fun FontSizeSetting(
     modifier: Modifier = Modifier
 ) {
     val fontSizeDescription = stringResource(
-        com.inkwell.core.ui.R.string.font_size_description,
+        com.inkwell.feature.characters.ui.R.string.font_size_description,
         fontSize.toInt()
     )
 
@@ -225,11 +225,11 @@ private fun FontSizeSetting(
             }
     ) {
         Text(
-            text = stringResource(com.inkwell.core.ui.R.string.font_size),
+            text = stringResource(com.inkwell.feature.characters.ui.R.string.font_size),
             style = MaterialTheme.typography.bodyLarge
         )
         Text(
-            text = stringResource(com.inkwell.core.ui.R.string.current_size, fontSize.toInt()),
+            text = stringResource(com.inkwell.feature.characters.ui.R.string.current_size, fontSize.toInt()),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -253,11 +253,11 @@ private fun FontFamilySetting(
     var expanded by remember { mutableStateOf(false) }
 
     SettingItem(
-        title = stringResource(com.inkwell.core.ui.R.string.font_family),
+        title = stringResource(com.inkwell.feature.characters.ui.R.string.font_family),
         description = fontFamily,
         modifier = modifier.semantics {
             contentDescription = stringResource(
-                com.inkwell.core.ui.R.string.font_family_description,
+                com.inkwell.feature.characters.ui.R.string.font_family_description,
                 fontFamily
             )
         }
@@ -293,7 +293,7 @@ private fun DailyWordGoalSetting(
     modifier: Modifier = Modifier
 ) {
     val goalDescription = stringResource(
-        com.inkwell.core.ui.R.string.daily_word_goal_description,
+        com.inkwell.feature.characters.ui.R.string.daily_word_goal_description,
         goal
     )
 
@@ -306,11 +306,11 @@ private fun DailyWordGoalSetting(
             }
     ) {
         Text(
-            text = stringResource(com.inkwell.core.ui.R.string.daily_word_goal),
+            text = stringResource(com.inkwell.feature.characters.ui.R.string.daily_word_goal),
             style = MaterialTheme.typography.bodyLarge
         )
         Text(
-            text = stringResource(com.inkwell.core.ui.R.string.words_per_day, goal),
+            text = stringResource(com.inkwell.feature.characters.ui.R.string.words_per_day, goal),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -331,13 +331,13 @@ private fun AutoSaveSetting(
     modifier: Modifier = Modifier
 ) {
     val autoSaveDescription = stringResource(
-        com.inkwell.core.ui.R.string.auto_save_description,
-        if (isEnabled) stringResource(com.inkwell.core.ui.R.string.enabled) else stringResource(com.inkwell.core.ui.R.string.disabled)
+        com.inkwell.feature.characters.ui.R.string.auto_save_description,
+        if (isEnabled) stringResource(com.inkwell.feature.characters.ui.R.string.enabled) else stringResource(com.inkwell.feature.characters.ui.R.string.disabled)
     )
 
     SettingItem(
-        title = stringResource(com.inkwell.core.ui.R.string.auto_save),
-        description = stringResource(com.inkwell.core.ui.R.string.auto_save_subtitle),
+        title = stringResource(com.inkwell.feature.characters.ui.R.string.auto_save),
+        description = stringResource(com.inkwell.feature.characters.ui.R.string.auto_save_subtitle),
         modifier = modifier.semantics {
             contentDescription = autoSaveDescription
         }
@@ -356,13 +356,13 @@ private fun BiometricSetting(
     modifier: Modifier = Modifier
 ) {
     val biometricDescription = stringResource(
-        com.inkwell.core.ui.R.string.biometric_description,
-        if (isEnabled) stringResource(com.inkwell.core.ui.R.string.enabled) else stringResource(com.inkwell.core.ui.R.string.disabled)
+        com.inkwell.feature.characters.ui.R.string.biometric_description,
+        if (isEnabled) stringResource(com.inkwell.feature.characters.ui.R.string.enabled) else stringResource(com.inkwell.feature.characters.ui.R.string.disabled)
     )
 
     SettingItem(
-        title = stringResource(com.inkwell.core.ui.R.string.biometric_lock),
-        description = stringResource(com.inkwell.core.ui.R.string.biometric_subtitle),
+        title = stringResource(com.inkwell.feature.characters.ui.R.string.biometric_lock),
+        description = stringResource(com.inkwell.feature.characters.ui.R.string.biometric_subtitle),
         modifier = modifier.semantics {
             contentDescription = biometricDescription
         }
@@ -381,11 +381,11 @@ private fun AccountSetting(
     modifier: Modifier = Modifier
 ) {
     SettingItem(
-        title = userName.ifBlank { stringResource(com.inkwell.core.ui.R.string.user_name) },
-        description = userEmail.ifBlank { stringResource(com.inkwell.core.ui.R.string.user_email) },
+        title = userName.ifBlank { stringResource(com.inkwell.feature.characters.ui.R.string.user_name) },
+        description = userEmail.ifBlank { stringResource(com.inkwell.feature.characters.ui.R.string.user_email) },
         modifier = modifier.semantics {
             contentDescription = stringResource(
-                com.inkwell.core.ui.R.string.account_description,
+                com.inkwell.feature.characters.ui.R.string.account_description,
                 userName,
                 userEmail
             )
@@ -406,11 +406,11 @@ private fun AboutSetting(
     modifier: Modifier = Modifier
 ) {
     SettingItem(
-        title = stringResource(com.inkwell.core.ui.R.string.version),
+        title = stringResource(com.inkwell.feature.characters.ui.R.string.version),
         description = appVersion,
         modifier = modifier.semantics {
             contentDescription = stringResource(
-                com.inkwell.core.ui.R.string.version_description,
+                com.inkwell.feature.characters.ui.R.string.version_description,
                 appVersion
             )
         }

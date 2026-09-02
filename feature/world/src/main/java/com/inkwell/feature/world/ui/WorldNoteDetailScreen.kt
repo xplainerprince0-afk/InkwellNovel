@@ -70,8 +70,8 @@ fun WorldNoteDetailScreen(
     }
 
     val screenTitle = stringResource(
-        if (isEditing) com.inkwell.core.ui.R.string.edit_note
-        else com.inkwell.core.ui.R.string.add_note
+        if (isEditing) com.inkwell.feature.characters.ui.R.string.edit_note
+        else com.inkwell.feature.characters.ui.R.string.add_note
     )
 
     Scaffold(
@@ -84,7 +84,7 @@ fun WorldNoteDetailScreen(
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -121,7 +121,7 @@ fun WorldNoteDetailScreen(
                 },
                 containerColor = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.save_note)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.save_note)
                 }
             ) {
                 Icon(
@@ -142,12 +142,12 @@ fun WorldNoteDetailScreen(
                 value = title,
                 onValueChange = { title = it },
                 label = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.note_title))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.note_title))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .semantics {
-                        contentDescription = stringResource(com.inkwell.core.ui.R.string.note_title_field)
+                        contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.note_title_field)
                     },
                 singleLine = true
             )
@@ -163,7 +163,7 @@ fun WorldNoteDetailScreen(
                     onValueChange = {},
                     readOnly = true,
                     label = {
-                        Text(text = stringResource(com.inkwell.core.ui.R.string.note_category))
+                        Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.note_category))
                     },
                     trailingIcon = {
                         ExposedDropdownMenuDefaults.TrailingIcon(expanded = isCategoryDropdownExpanded)
@@ -173,7 +173,7 @@ fun WorldNoteDetailScreen(
                         .menuAnchor()
                         .semantics {
                             contentDescription = stringResource(
-                                com.inkwell.core.ui.R.string.note_category_dropdown,
+                                com.inkwell.feature.characters.ui.R.string.note_category_dropdown,
                                 category.displayName
                             )
                         }
@@ -192,7 +192,7 @@ fun WorldNoteDetailScreen(
                             },
                             modifier = Modifier.semantics {
                                 contentDescription = stringResource(
-                                    com.inkwell.core.ui.R.string.select_category,
+                                    com.inkwell.feature.characters.ui.R.string.select_category,
                                     selectedCategory.displayName
                                 )
                             }
@@ -207,13 +207,13 @@ fun WorldNoteDetailScreen(
                 value = content,
                 onValueChange = { content = it },
                 label = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.note_content))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.note_content))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(250.dp)
                     .semantics {
-                        contentDescription = stringResource(com.inkwell.core.ui.R.string.note_content_field)
+                        contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.note_content_field)
                     },
                 maxLines = 15
             )
@@ -224,12 +224,12 @@ fun WorldNoteDetailScreen(
                 value = locationTag,
                 onValueChange = { locationTag = it },
                 label = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.location_tag))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.location_tag))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .semantics {
-                        contentDescription = stringResource(com.inkwell.core.ui.R.string.location_tag_field)
+                        contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.location_tag_field)
                     },
                 singleLine = true
             )

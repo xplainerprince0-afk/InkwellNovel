@@ -72,7 +72,7 @@ fun WorldScreen(
 
     val categories = WorldNoteCategory.entries
     val worldDescription = stringResource(
-        com.inkwell.core.ui.R.string.world_screen_description,
+        com.inkwell.feature.characters.ui.R.string.world_screen_description,
         uiState.filteredNotes.size,
         uiState.selectedCategory.displayName
     )
@@ -81,13 +81,13 @@ fun WorldScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.world_building))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.world_building))
                 },
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -106,7 +106,7 @@ fun WorldScreen(
                 onClick = { onNavigateToDetail(null) },
                 containerColor = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.add_world_note)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.add_world_note)
                 }
             ) {
                 Icon(
@@ -127,7 +127,7 @@ fun WorldScreen(
             TabRow(
                 selectedTabIndex = selectedTabIndex,
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.category_tabs)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.category_tabs)
                 }
             ) {
                 categories.forEachIndexed { index, category ->
@@ -146,7 +146,7 @@ fun WorldScreen(
                         },
                         modifier = Modifier.semantics {
                             contentDescription = stringResource(
-                                com.inkwell.core.ui.R.string.category_tab_description,
+                                com.inkwell.feature.characters.ui.R.string.category_tab_description,
                                 category.displayName
                             )
                         }
@@ -160,7 +160,7 @@ fun WorldScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = stringResource(com.inkwell.core.ui.R.string.no_notes_in_category),
+                        text = stringResource(com.inkwell.feature.characters.ui.R.string.no_notes_in_category),
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -193,12 +193,12 @@ fun WorldScreen(
         AlertDialog(
             onDismissRequest = { showDeleteDialog = null },
             title = {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.delete_note))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.delete_note))
             },
             text = {
                 Text(
                     text = stringResource(
-                        com.inkwell.core.ui.R.string.delete_note_confirmation,
+                        com.inkwell.feature.characters.ui.R.string.delete_note_confirmation,
                         note?.title ?: ""
                     )
                 )
@@ -210,14 +210,14 @@ fun WorldScreen(
                         showDeleteDialog = null
                     }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.delete))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.delete))
                 }
             },
             dismissButton = {
                 TextButton(
                     onClick = { showDeleteDialog = null }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.cancel))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.cancel))
                 }
             }
         )
@@ -238,7 +238,7 @@ private fun WorldNoteCard(
             .clickable(onClick = onClick)
             .semantics {
                 contentDescription = stringResource(
-                    com.inkwell.core.ui.R.string.note_card_description,
+                    com.inkwell.feature.characters.ui.R.string.note_card_description,
                     note.title,
                     note.category.displayName,
                     note.content.take(50)
@@ -272,7 +272,7 @@ private fun WorldNoteCard(
                                 .size(24.dp)
                                 .semantics {
                                     contentDescription = stringResource(
-                                        com.inkwell.core.ui.R.string.location_tagged,
+                                        com.inkwell.feature.characters.ui.R.string.location_tagged,
                                         note.locationTag
                                     )
                                 }
@@ -292,7 +292,7 @@ private fun WorldNoteCard(
                             .size(24.dp)
                             .semantics {
                                 contentDescription = stringResource(
-                                    com.inkwell.core.ui.R.string.delete_note,
+                                    com.inkwell.feature.characters.ui.R.string.delete_note,
                                     note.title
                                 )
                             }
@@ -319,7 +319,7 @@ private fun WorldNoteCard(
                     )
                     .semantics {
                         contentDescription = stringResource(
-                            com.inkwell.core.ui.R.string.category_badge_description,
+                            com.inkwell.feature.characters.ui.R.string.category_badge_description,
                             note.category.displayName
                         )
                     }

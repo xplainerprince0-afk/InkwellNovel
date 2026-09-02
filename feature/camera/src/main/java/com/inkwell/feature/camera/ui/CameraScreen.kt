@@ -101,7 +101,7 @@ fun CameraScreen(
         if (!isGranted) {
             scope.launch {
                 snackbarHostState.showSnackbar(
-                    context.getString(com.inkwell.core.ui.R.string.camera_permission_required)
+                    context.getString(com.inkwell.feature.characters.ui.R.string.camera_permission_required)
                 )
             }
         }
@@ -136,21 +136,21 @@ fun CameraScreen(
         }
     }
 
-    val cameraDescription = stringResource(com.inkwell.core.ui.R.string.camera_screen_description)
-    val captureButtonDescription = stringResource(com.inkwell.core.ui.R.string.capture_photo)
-    val saveButtonDescription = stringResource(com.inkwell.core.ui.R.string.save_recognized_text)
+    val cameraDescription = stringResource(com.inkwell.feature.characters.ui.R.string.camera_screen_description)
+    val captureButtonDescription = stringResource(com.inkwell.feature.characters.ui.R.string.capture_photo)
+    val saveButtonDescription = stringResource(com.inkwell.feature.characters.ui.R.string.save_recognized_text)
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.scan_notes))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.scan_notes))
                 },
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -181,14 +181,14 @@ fun CameraScreen(
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            text = stringResource(com.inkwell.core.ui.R.string.camera_permission_needed),
+                            text = stringResource(com.inkwell.feature.characters.ui.R.string.camera_permission_needed),
                             style = MaterialTheme.typography.bodyLarge
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(
                             onClick = { permissionLauncher.launch(Manifest.permission.CAMERA) }
                         ) {
-                            Text(text = stringResource(com.inkwell.core.ui.R.string.grant_permission))
+                            Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.grant_permission))
                         }
                     }
                 }
@@ -213,7 +213,7 @@ fun CameraScreen(
                             )
                             Spacer(modifier = Modifier.height(16.dp))
                             Text(
-                                text = stringResource(com.inkwell.core.ui.R.string.processing_image),
+                                text = stringResource(com.inkwell.feature.characters.ui.R.string.processing_image),
                                 style = MaterialTheme.typography.bodyLarge
                             )
                         }
@@ -236,10 +236,10 @@ fun CameraScreen(
         AlertDialog(
             onDismissRequest = { showSaveDialog = false },
             title = {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.save_to_chapter))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.save_to_chapter))
             },
             text = {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.save_text_confirmation))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.save_text_confirmation))
             },
             confirmButton = {
                 TextButton(
@@ -248,14 +248,14 @@ fun CameraScreen(
                         showSaveDialog = false
                     }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.save))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.save))
                 }
             },
             dismissButton = {
                 TextButton(
                     onClick = { showSaveDialog = false }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.cancel))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.cancel))
                 }
             }
         )
@@ -337,7 +337,7 @@ private fun CameraPreview(
                 .size(72.dp)
                 .clip(CircleShape)
                 .semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.capture_photo)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.capture_photo)
                 },
             shape = CircleShape
         ) {
@@ -361,7 +361,7 @@ private fun RecognizedTextOverlay(
         modifier = modifier.padding(16.dp)
     ) {
         Text(
-            text = stringResource(com.inkwell.core.ui.R.string.recognized_text),
+            text = stringResource(com.inkwell.feature.characters.ui.R.string.recognized_text),
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier.padding(bottom = 8.dp)
         )
@@ -377,7 +377,7 @@ private fun RecognizedTextOverlay(
         ) {
             Text(
                 text = recognizedText.ifBlank {
-                    stringResource(com.inkwell.core.ui.R.string.no_text_recognized)
+                    stringResource(com.inkwell.feature.characters.ui.R.string.no_text_recognized)
                 },
                 style = MaterialTheme.typography.bodyMedium
             )
@@ -392,7 +392,7 @@ private fun RecognizedTextOverlay(
             OutlinedButton(
                 onClick = onRetake,
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.retake_photo)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.retake_photo)
                 }
             ) {
                 Icon(
@@ -400,14 +400,14 @@ private fun RecognizedTextOverlay(
                     contentDescription = null
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(text = stringResource(com.inkwell.core.ui.R.string.retake))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.retake))
             }
 
             Button(
                 onClick = onSave,
                 enabled = recognizedText.isNotBlank(),
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.save_recognized_text)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.save_recognized_text)
                 }
             ) {
                 Icon(
@@ -415,7 +415,7 @@ private fun RecognizedTextOverlay(
                     contentDescription = null
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(text = stringResource(com.inkwell.core.ui.R.string.save_to_chapter))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.save_to_chapter))
             }
         }
     }

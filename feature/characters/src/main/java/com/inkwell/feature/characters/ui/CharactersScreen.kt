@@ -81,7 +81,7 @@ fun CharactersScreen(
     }
 
     val charactersDescription = stringResource(
-        com.inkwell.core.ui.R.string.characters_screen_description,
+        com.inkwell.feature.characters.ui.R.string.characters_screen_description,
         uiState.filteredCharacters.size
     )
 
@@ -90,14 +90,14 @@ fun CharactersScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = stringResource(com.inkwell.core.ui.R.string.characters)
+                        text = stringResource(com.inkwell.feature.characters.ui.R.string.characters)
                     )
                 },
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -110,7 +110,7 @@ fun CharactersScreen(
                     IconButton(
                         onClick = { showFilterMenu = !showFilterMenu },
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.filter_characters)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.filter_characters)
                         }
                     ) {
                         Icon(
@@ -129,7 +129,7 @@ fun CharactersScreen(
                 onClick = { onNavigateToDetail(null) },
                 containerColor = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.add_character)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.add_character)
                 }
             ) {
                 Icon(
@@ -160,7 +160,7 @@ fun CharactersScreen(
                 active = isSearchActive,
                 onActiveChange = { isSearchActive = it },
                 placeholder = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.search_characters))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.search_characters))
                 },
                 leadingIcon = {
                     Icon(
@@ -196,7 +196,7 @@ fun CharactersScreen(
                 ) {
                     Column(modifier = Modifier.padding(8.dp)) {
                         Text(
-                            text = stringResource(com.inkwell.core.ui.R.string.filter_by_role),
+                            text = stringResource(com.inkwell.feature.characters.ui.R.string.filter_by_role),
                             style = MaterialTheme.typography.titleMedium,
                             modifier = Modifier.padding(8.dp)
                         )
@@ -224,7 +224,7 @@ fun CharactersScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = stringResource(com.inkwell.core.ui.R.string.no_characters),
+                        text = stringResource(com.inkwell.feature.characters.ui.R.string.no_characters),
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -259,12 +259,12 @@ fun CharactersScreen(
         AlertDialog(
             onDismissRequest = { showDeleteDialog = null },
             title = {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.delete_character))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.delete_character))
             },
             text = {
                 Text(
                     text = stringResource(
-                        com.inkwell.core.ui.R.string.delete_character_confirmation,
+                        com.inkwell.feature.characters.ui.R.string.delete_character_confirmation,
                         character?.name ?: ""
                     )
                 )
@@ -276,14 +276,14 @@ fun CharactersScreen(
                         showDeleteDialog = null
                     }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.delete))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.delete))
                 }
             },
             dismissButton = {
                 TextButton(
                     onClick = { showDeleteDialog = null }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.cancel))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.cancel))
                 }
             }
         )
@@ -298,7 +298,7 @@ private fun CharacterCard(
     modifier: Modifier = Modifier
 ) {
     val roleBadgeDescription = stringResource(
-        com.inkwell.core.ui.R.string.role_badge_description,
+        com.inkwell.feature.characters.ui.R.string.role_badge_description,
         character.role.displayName
     )
 
@@ -308,7 +308,7 @@ private fun CharacterCard(
             .clickable(onClick = onClick)
             .semantics {
                 contentDescription = stringResource(
-                    com.inkwell.core.ui.R.string.character_card_description,
+                    com.inkwell.feature.characters.ui.R.string.character_card_description,
                     character.name,
                     character.role.displayName,
                     character.description.take(50)
@@ -340,7 +340,7 @@ private fun CharacterCard(
                         .size(24.dp)
                         .semantics {
                             contentDescription = stringResource(
-                                com.inkwell.core.ui.R.string.delete_character,
+                                com.inkwell.feature.characters.ui.R.string.delete_character,
                                 character.name
                             )
                         }

@@ -119,7 +119,7 @@ fun MapsScreen(
     }
 
     val mapsDescription = stringResource(
-        com.inkwell.core.ui.R.string.maps_screen_description,
+        com.inkwell.feature.characters.ui.R.string.maps_screen_description,
         uiState.savedLocations.size
     )
 
@@ -127,13 +127,13 @@ fun MapsScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.writing_locations))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.writing_locations))
                 },
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -152,7 +152,7 @@ fun MapsScreen(
                 onClick = { showAddLocationDialog = true },
                 containerColor = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.semantics {
-                    contentDescription = stringResource(com.inkwell.core.ui.R.string.add_location)
+                    contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.add_location)
                 }
             ) {
                 Icon(
@@ -193,7 +193,7 @@ fun MapsScreen(
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(
-                                text = stringResource(com.inkwell.core.ui.R.string.location_permission_needed),
+                                text = stringResource(com.inkwell.feature.characters.ui.R.string.location_permission_needed),
                                 style = MaterialTheme.typography.bodyLarge
                             )
                             Spacer(modifier = Modifier.height(16.dp))
@@ -207,7 +207,7 @@ fun MapsScreen(
                                     )
                                 }
                             ) {
-                                Text(text = stringResource(com.inkwell.core.ui.R.string.grant_permission))
+                                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.grant_permission))
                             }
                         }
                     }
@@ -215,7 +215,7 @@ fun MapsScreen(
             }
 
             Text(
-                text = stringResource(com.inkwell.core.ui.R.string.saved_locations),
+                text = stringResource(com.inkwell.feature.characters.ui.R.string.saved_locations),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(16.dp)
@@ -227,7 +227,7 @@ fun MapsScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = stringResource(com.inkwell.core.ui.R.string.no_saved_locations),
+                        text = stringResource(com.inkwell.feature.characters.ui.R.string.no_saved_locations),
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -248,7 +248,7 @@ fun MapsScreen(
                             onDelete = { showDeleteDialog = location.id },
                             modifier = Modifier.semantics {
                                 contentDescription = stringResource(
-                                    com.inkwell.core.ui.R.string.location_card_description,
+                                    com.inkwell.feature.characters.ui.R.string.location_card_description,
                                     location.name,
                                     location.description
                                 )
@@ -280,12 +280,12 @@ fun MapsScreen(
         AlertDialog(
             onDismissRequest = { showDeleteDialog = null },
             title = {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.delete_location))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.delete_location))
             },
             text = {
                 Text(
                     text = stringResource(
-                        com.inkwell.core.ui.R.string.delete_location_confirmation,
+                        com.inkwell.feature.characters.ui.R.string.delete_location_confirmation,
                         location?.name ?: ""
                     )
                 )
@@ -297,14 +297,14 @@ fun MapsScreen(
                         showDeleteDialog = null
                     }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.delete))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.delete))
                 }
             },
             dismissButton = {
                 TextButton(
                     onClick = { showDeleteDialog = null }
                 ) {
-                    Text(text = stringResource(com.inkwell.core.ui.R.string.cancel))
+                    Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.cancel))
                 }
             }
         )
@@ -371,7 +371,7 @@ private fun AddLocationDialog(
     AlertDialog(
         onDismissRequest = onDismiss,
         title = {
-            Text(text = stringResource(com.inkwell.core.ui.R.string.add_location))
+            Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.add_location))
         },
         text = {
             Column {
@@ -379,7 +379,7 @@ private fun AddLocationDialog(
                     value = name,
                     onValueChange = { name = it },
                     label = {
-                        Text(text = stringResource(com.inkwell.core.ui.R.string.location_name))
+                        Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.location_name))
                     },
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true
@@ -389,7 +389,7 @@ private fun AddLocationDialog(
                     value = description,
                     onValueChange = { description = it },
                     label = {
-                        Text(text = stringResource(com.inkwell.core.ui.R.string.location_description))
+                        Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.location_description))
                     },
                     modifier = Modifier.fillMaxWidth(),
                     maxLines = 3
@@ -397,7 +397,7 @@ private fun AddLocationDialog(
                 Spacer(modifier = Modifier.height(12.dp))
                 Text(
                     text = stringResource(
-                        com.inkwell.core.ui.R.string.coordinates,
+                        com.inkwell.feature.characters.ui.R.string.coordinates,
                         location.latitude,
                         location.longitude
                     ),
@@ -415,12 +415,12 @@ private fun AddLocationDialog(
                 },
                 enabled = name.isNotBlank()
             ) {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.save))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.save))
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text(text = stringResource(com.inkwell.core.ui.R.string.cancel))
+                Text(text = stringResource(com.inkwell.feature.characters.ui.R.string.cancel))
             }
         }
     )
@@ -465,7 +465,7 @@ private fun LocationCard(
                 }
                 Text(
                     text = stringResource(
-                        com.inkwell.core.ui.R.string.coordinates_format,
+                        com.inkwell.feature.characters.ui.R.string.coordinates_format,
                         location.latitude,
                         location.longitude
                     ),
@@ -477,7 +477,7 @@ private fun LocationCard(
                 onClick = onDelete,
                 modifier = Modifier.semantics {
                     contentDescription = stringResource(
-                        com.inkwell.core.ui.R.string.delete_location,
+                        com.inkwell.feature.characters.ui.R.string.delete_location,
                         location.name
                     )
                 }

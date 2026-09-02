@@ -84,17 +84,17 @@ fun EditorScreen(
         focusRequester.requestFocus()
     }
 
-    val editorDescription = stringResource(com.inkwell.core.ui.R.string.editor_screen_description)
+    val editorDescription = stringResource(com.inkwell.feature.characters.ui.R.string.editor_screen_description)
     val wordCountDescription = stringResource(
-        com.inkwell.core.ui.R.string.word_count_description,
+        com.inkwell.feature.characters.ui.R.string.word_count_description,
         uiState.wordCount
     )
     val chapterCountDescription = stringResource(
-        com.inkwell.core.ui.R.string.chapter_count_description,
+        com.inkwell.feature.characters.ui.R.string.chapter_count_description,
         uiState.chapterCount
     )
-    val saveDescription = stringResource(com.inkwell.core.ui.R.string.save_chapter)
-    val autoSaveIndicatorDescription = stringResource(com.inkwell.core.ui.R.string.auto_save_indicator)
+    val saveDescription = stringResource(com.inkwell.feature.characters.ui.R.string.save_chapter)
+    val autoSaveIndicatorDescription = stringResource(com.inkwell.feature.characters.ui.R.string.auto_save_indicator)
 
     Scaffold(
         topBar = {
@@ -119,7 +119,7 @@ fun EditorScreen(
                             .fillMaxWidth()
                             .semantics {
                                 contentDescription = stringResource(
-                                    com.inkwell.core.ui.R.string.chapter_title_field
+                                    com.inkwell.feature.characters.ui.R.string.chapter_title_field
                                 )
                             }
                     )
@@ -128,7 +128,7 @@ fun EditorScreen(
                     IconButton(
                         onClick = onNavigateBack,
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.navigate_back)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.navigate_back)
                         }
                     ) {
                         Icon(
@@ -141,7 +141,7 @@ fun EditorScreen(
                     IconButton(
                         onClick = { showChapterSheet = true },
                         modifier = Modifier.semantics {
-                            contentDescription = stringResource(com.inkwell.core.ui.R.string.show_chapters)
+                            contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.show_chapters)
                         }
                     ) {
                         Icon(
@@ -160,7 +160,7 @@ fun EditorScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .semantics {
-                        contentDescription = stringResource(com.inkwell.core.ui.R.string.editor_status_bar)
+                        contentDescription = stringResource(com.inkwell.feature.characters.ui.R.string.editor_status_bar)
                     }
             ) {
                 AnimatedVisibility(
@@ -169,7 +169,7 @@ fun EditorScreen(
                     exit = fadeOut()
                 ) {
                     Text(
-                        text = stringResource(com.inkwell.core.ui.R.string.auto_saving),
+                        text = stringResource(com.inkwell.feature.characters.ui.R.string.auto_saving),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier
@@ -183,7 +183,7 @@ fun EditorScreen(
 
                 Text(
                     text = stringResource(
-                        com.inkwell.core.ui.R.string.editor_bottom_bar,
+                        com.inkwell.feature.characters.ui.R.string.editor_bottom_bar,
                         uiState.wordCount,
                         uiState.chapterCount
                     ),
