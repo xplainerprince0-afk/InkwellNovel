@@ -11,15 +11,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inkwell.core.data.repository.model.Character
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CharactersScreen(
     onNavigateBack: () -> Unit,
-    viewModel: CharactersViewModel = hiltViewModel()
+    viewModel: CharactersViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 

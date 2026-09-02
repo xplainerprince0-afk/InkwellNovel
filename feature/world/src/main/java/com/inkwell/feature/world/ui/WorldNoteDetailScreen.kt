@@ -7,7 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -15,7 +15,7 @@ fun WorldNoteDetailScreen(
     noteId: String?,
     novelId: String,
     onNavigateBack: () -> Unit,
-    viewModel: WorldViewModel = hiltViewModel()
+    viewModel: WorldViewModel = viewModel()
 ) {
     var title by remember { mutableStateOf("") }
     var content by remember { mutableStateOf("") }

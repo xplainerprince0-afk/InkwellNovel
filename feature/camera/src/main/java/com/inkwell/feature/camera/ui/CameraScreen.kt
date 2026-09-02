@@ -9,13 +9,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CameraScreen(
     onNavigateBack: () -> Unit,
-    viewModel: CameraViewModel = hiltViewModel()
+    viewModel: CameraViewModel = viewModel()
 ) {
     Scaffold(
         topBar = {

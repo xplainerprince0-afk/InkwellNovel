@@ -7,8 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inkwell.core.data.repository.model.CharacterRole
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -17,9 +16,8 @@ fun CharacterDetailScreen(
     characterId: String?,
     novelId: String,
     onNavigateBack: () -> Unit,
-    viewModel: CharactersViewModel = hiltViewModel()
+    viewModel: CharactersViewModel = viewModel()
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     var name by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
     var notes by remember { mutableStateOf("") }
