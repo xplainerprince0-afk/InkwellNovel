@@ -22,4 +22,17 @@ class EditorViewModel @Inject constructor() : ViewModel() {
 
     private val _uiState = MutableStateFlow(EditorUiState())
     val uiState: StateFlow<EditorUiState> = _uiState.asStateFlow()
+
+    fun updateChapterTitle(title: String) {
+        _uiState.update { it.copy(chapterTitle = title) }
+    }
+
+    fun updateContent(content: String) {
+        _uiState.update {
+            it.copy(
+                content = content,
+                wordCount = content.split("\\s+".toRegex()).size
+            )
+        }
+    }
 }
