@@ -16,7 +16,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Book
+import androidx.compose.material.icons.outlined.Create
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -61,7 +61,7 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.app_name)) },
+                title = { Text("Inkwell") },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
@@ -93,7 +93,7 @@ fun HomeScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
-                placeholder = { Text(stringResource(R.string.search_novels)) },
+                placeholder = { Text("Search novels") },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Filled.Search,
@@ -116,10 +116,10 @@ fun HomeScreen(
             // Novel List
             if (uiState.novels.isEmpty()) {
                 EmptyState(
-                    icon = Icons.Outlined.Book,
-                    title = stringResource(R.string.empty_novels_title),
-                    subtitle = stringResource(R.string.empty_novels_subtitle),
-                    actionText = stringResource(R.string.create_first_novel),
+                    icon = Icons.Outlined.Create,
+                    title = "No novels yet",
+                    subtitle = "Create your first novel to get started",
+                    actionText = "Create Novel",
                     onAction = onCreateNovelClick
                 )
             } else {
@@ -173,7 +173,7 @@ private fun StatisticsSection(
                     color = MaterialTheme.colorScheme.onPrimaryContainer
                 )
                 Text(
-                    text = stringResource(R.string.total_words),
+                    text = "Total Words",
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onPrimaryContainer
                 )
@@ -190,7 +190,7 @@ private fun StatisticsSection(
                     color = MaterialTheme.colorScheme.onPrimaryContainer
                 )
                 Text(
-                    text = stringResource(R.string.total_novels),
+                    text = "Total Novels",
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onPrimaryContainer
                 )

@@ -37,7 +37,8 @@ class InkwellApplication : Application(), Configuration.Provider {
 
     private fun initializeCrashlytics() {
         val crashlytics = FirebaseCrashlytics.getInstance()
-        crashlytics.setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        // crashlytics.setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        crashlytics.setCrashlyticsCollectionEnabled(true)
     }
 
     private fun initializeWorkManager() {
