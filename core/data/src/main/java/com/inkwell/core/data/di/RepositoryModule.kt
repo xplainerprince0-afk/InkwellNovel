@@ -6,6 +6,8 @@ import com.inkwell.core.data.repository.CharacterRepository
 import com.inkwell.core.data.repository.CharacterRepositoryImpl
 import com.inkwell.core.data.repository.NovelRepository
 import com.inkwell.core.data.repository.NovelRepositoryImpl
+import com.inkwell.core.data.repository.SettingsRepository
+import com.inkwell.core.data.repository.SettingsRepositoryImpl
 import com.inkwell.core.data.repository.WritingSessionRepository
 import com.inkwell.core.data.repository.WritingSessionRepositoryImpl
 import com.inkwell.core.data.repository.WorldNoteRepository
@@ -39,4 +41,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindWritingSessionRepository(impl: WritingSessionRepositoryImpl): WritingSessionRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindSettingsRepository(impl: SettingsRepositoryImpl): SettingsRepository
 }
