@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Purple Palette -->
+    <color name="purple_80">#FFD0BCFF</color>
+    <color name="purple_grey_80">#FFCCC2DC</color>
+    <color name="pink_80">#FFEFB8C8</color>
+
+    <color name="purple_40">#FF6650A4</color>
+    <color name="purple_grey_40">#FF625B71</color>
+    <color name="pink_40">#FF7D5260</color>
+
+    <!-- Extended Purple Palette -->
+    <color name="purple_10">#FF1A0033</color>
+    <color name="purple_20">#FF330066</color>
+    <color name="purple_30">#FF4D0099</color>
+    <color name="purple_50">#FF7F4DC9</color>
+    <color name="purple_60">#FF9970D6</color>
+    <color name="purple_70">#FFB399E3</color>
+    <color name="purple_90">#FFE6D9F9</color>
+    <color name="purple_95">#FFF3ECFC</color>
+    <color name="purple_99">#FFFDFBFF</color>
+
+    <!-- Chapter Colors -->
+    <color name="chapter_blue">#FF1E88E5</color>
+    <color name="chapter_green">#FF43A047</color>
+    <color name="chapter_orange">#FFFF9800</color>
+    <color name="chapter_red">#FFE53935</color>
+    <color name="chapter_teal">#FF00897B</color>
+    <color name="chapter_indigo">#FF3949AB</color>
+
+    <!-- Character Colors -->
+    <color name="character_primary">#FF5C6BC0</color>
+    <color name="character_secondary">#FF7986CB</color>
+    <color name="character_tertiary">#FF9FA8DA</color>
+
+    <!-- World Building Colors -->
+    <color name="world_primary">#FF26A69A</color>
+    <color name="world_secondary">#FF4DB6AC</color>
+    <color name="world_tertiary">#FF80CBC4</color>
+
+    <!-- Status Colors -->
+    <color name="status_draft">#FFFFA726</color>
+    <color name="status_in_progress">#FF42A5F5</color>
+    <color name="status_complete">#FF66BB6A</color>
+    <color name="status_archived">#FFBDBDBD</color>
+
+    <!-- Surface Colors -->
+    <color name="surface_light">#FFFFFBFE</color>
+    <color name="surface_dark">#FF1C1B1F</color>
+    <color name="surface_variant_light">#FFE7E0EC</color>
+    <color name="surface_variant_dark">#FF49454F</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#FFFFFBFE</color>
+    <color name="background_dark">#FF1C1B1F</color>
+
+    <!-- On Surface Colors -->
+    <color name="on_surface_light">#FF1C1B1F</color>
+    <color name="on_surface_dark">#FFE6E1E5</color>
+
+    <!-- Outline Colors -->
+    <color name="outline_light">#FF79747E</color>
+    <color name="outline_dark">#FF938F99</color>
+</resources>

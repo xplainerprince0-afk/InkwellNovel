@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include important data for backup -->
+    <include domain="sharedpref" path="." />
+    <include domain="database" path="." />
+    <include domain="file" path="novels/" />
+    <include domain="file" path="chapters/" />
+    <include domain="file" path="characters/" />
+    <include domain="file" path="world/" />
+
+    <!-- Exclude sensitive data -->
+    <exclude domain="sharedpref" path="user_credentials.xml" />
+    <exclude domain="sharedpref" path="biometric_keys.xml" />
+    <exclude domain="database" path="temp_" />
+    <exclude domain="file" path="exports/" />
+    <exclude domain="file" path="cache/" />
+</full-backup-content>

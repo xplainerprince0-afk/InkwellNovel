@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Inkwell</string>
+    <string name="editor_title">Editor</string>
+    <string name="characters_title">Characters</string>
+    <string name="world_title">World Building</string>
+    <string name="settings_title">Settings</string>
+    <string name="camera_title">Scan Notes</string>
+    <string name="maps_title">Writing Locations</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_write">Write</string>
+    <string name="nav_world">World</string>
+    <string name="nav_settings">Settings</string>
+    <string name="empty_characters_title">No Characters Yet</string>
+    <string name="empty_characters_subtitle">Create characters to organize your story</string>
+    <string name="empty_world_title">No World Notes Yet</string>
+    <string name="empty_world_subtitle">Build the world of your novel</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_dark_mode_desc">Customize the look of the app</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_notifications_desc">Manage notification preferences</string>
+    <string name="settings_backup">Backup</string>
+    <string name="settings_backup_desc">Backup and restore your data</string>
+    <string name="settings_export">Export</string>
+    <string name="settings_export_desc">Export novels to files</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_desc">App version and information</string>
+    <string name="home_title">Inkwell</string>
+    <string name="create_novel">Create New Novel</string>
+    <string name="search_novels">Search novels</string>
+    <string name="total_words">Total Words</string>
+    <string name="total_novels">Total Novels</string>
+
+    <!-- Editor Module -->
+    <string name="editor_screen_description">Novel writing editor with text input area</string>
+    <string name="chapter_list_description">Chapter list with %1$d chapters</string>
+    <string name="chapters">Chapters</string>
+    <string name="add_chapter">Add new chapter</string>
+    <string name="no_chapters">No chapters yet. Tap + to create one.</string>
+    <string name="chapter_item_description">%1$s, %2$d words%3$s</string>
+    <string name="currently_selected">, currently selected</string>
+    <string name="drag_to_reorder">Drag to reorder chapter</string>
+    <string name="delete_chapter">Delete chapter %1$s</string>
+    <string name="chapter_title_field">Chapter title text field</string>
+    <string name="navigate_back">Navigate back</string>
+    <string name="show_chapters">Show chapters list</string>
+    <string name="editor_status_bar">Editor status bar with word and chapter counts</string>
+    <string name="auto_saving">Auto-saving…</string>
+    <string name="auto_save_indicator">Auto-save indicator</string>
+    <string name="word_count_description">%1$d words</string>
+    <string name="chapter_count_description">%1$d chapters</string>
+    <string name="editor_bottom_bar">%1$d words · %2$d chapters</string>
+    <string name="save_chapter">Save chapter</string>
+    <string name="close">Close</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <!-- Characters Module -->
+    <string name="characters_screen_description">Character management screen with %1$d characters</string>
+    <string name="characters">Characters</string>
+    <string name="filter_characters">Filter characters</string>
+    <string name="add_character">Add new character</string>
+    <string name="search_characters">Search characters</string>
+    <string name="no_characters">No characters yet. Tap + to add one.</string>
+    <string name="filter_by_role">Filter by role</string>
+    <string name="character_card_description">%1$s, %2$s role, %3$s</string>
+    <string name="role_badge_description">Role: %1$s</string>
+    <string name="delete_character">Delete character</string>
+    <string name="delete_character_confirmation">Are you sure you want to delete %1$s?</string>
+    <string name="character_name">Character name</string>
+    <string name="character_name_field">Enter character name</string>
+    <string name="character_role">Character role</string>
+    <string name="character_role_dropdown">Role: %1$s. Tap to change.</string>
+    <string name="select_role">Select role: %1$s</string>
+    <string name="character_description">Description</string>
+    <string name="character_description_field">Enter character description</string>
+    <string name="character_notes">Notes</string>
+    <string name="character_notes_field">Enter character notes</string>
+    <string name="edit_character">Edit character</string>
+    <string name="save_character">Save character</string>
+
+    <!-- World Module -->
+    <string name="world_screen_description">World-building notes with %1$d notes in %2$s category</string>
+    <string name="world_building">World Building</string>
+    <string name="category_tabs">Category tabs for world-building notes</string>
+    <string name="category_tab_description">%1$s tab</string>
+    <string name="add_world_note">Add world-building note</string>
+    <string name="no_notes_in_category">No notes in this category yet.</string>
+    <string name="note_card_description">%1$s, %2$s category, %3$s</string>
+    <string name="category_badge_description">Category: %1$s</string>
+    <string name="location_tagged">Location tagged: %1$s</string>
+    <string name="delete_note">Delete note</string>
+    <string name="delete_note_confirmation">Are you sure you want to delete %1$s?</string>
+    <string name="note_title">Note title</string>
+    <string name="note_title_field">Enter note title</string>
+    <string name="note_category">Category</string>
+    <string name="note_category_dropdown">Category: %1$s. Tap to change.</string>
+    <string name="select_category">Select category: %1$s</string>
+    <string name="note_content">Content</string>
+    <string name="note_content_field">Enter note content</string>
+    <string name="location_tag">Location tag</string>
+    <string name="location_tag_field">Enter location tag</string>
+    <string name="edit_note">Edit note</string>
+    <string name="save_note">Save note</string>
+
+    <!-- Settings Module -->
+    <string name="settings">Settings</string>
+    <string name="settings_screen_description">App settings screen with appearance, writing, security, account, and about sections</string>
+    <string name="appearance_section">Appearance</string>
+    <string name="writing_section">Writing</string>
+    <string name="security_section">Security</string>
+    <string name="account_section">Account</string>
+    <string name="about_section">About</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode_subtitle">Enable dark theme</string>
+    <string name="dark_mode_description">Dark mode is %1$s</string>
+    <string name="enabled">enabled</string>
+    <string name="disabled">disabled</string>
+    <string name="font_size">Font Size</string>
+    <string name="font_size_description">Font size: %1$d sp</string>
+    <string name="current_size">Current size: %1$d sp</string>
+    <string name="font_family">Font Family</string>
+    <string name="font_family_description">Font family: %1$s</string>
+    <string name="daily_word_goal">Daily Word Goal</string>
+    <string name="daily_word_goal_description">Daily word goal: %1$d words</string>
+    <string name="words_per_day">%1$d words per day</string>
+    <string name="auto_save">Auto-Save</string>
+    <string name="auto_save_subtitle">Automatically save your work</string>
+    <string name="auto_save_description">Auto-save is %1$s</string>
+    <string name="biometric_lock">Biometric Lock</string>
+    <string name="biometric_subtitle">Require fingerprint or face to unlock</string>
+    <string name="biometric_description">Biometric lock is %1$s</string>
+    <string name="user_name">User Name</string>
+    <string name="user_email">User Email</string>
+    <string name="account_description">Account: %1$s, %2$s</string>
+    <string name="version">Version</string>
+    <string name="version_description">App version %1$s</string>
+
+    <!-- Camera Module -->
+    <string name="camera_screen_description">Camera for scanning handwritten notes</string>
+    <string name="scan_notes">Scan Notes</string>
+    <string name="capture_photo">Capture photo</string>
+    <string name="camera_permission_required">Camera permission is required to scan notes</string>
+    <string name="camera_permission_needed">Camera permission is needed to scan handwritten notes</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="processing_image">Processing image…</string>
+    <string name="recognized_text">Recognized Text</string>
+    <string name="no_text_recognized">No text was recognized in the image.</string>
+    <string name="save_recognized_text">Save recognized text to chapter</string>
+    <string name="save_to_chapter">Save to Chapter</string>
+    <string name="save_text_confirmation">Save the recognized text to the current chapter?</string>
+    <string name="retake">Retake</string>
+    <string name="retake_photo">Retake photo</string>
+
+    <!-- Maps Module -->
+    <string name="maps_screen_description">Maps screen with %1$d saved locations</string>
+    <string name="writing_locations">Writing Locations</string>
+    <string name="add_location">Add new location</string>
+    <string name="location_permission_needed">Location permission is needed to show your current location</string>
+    <string name="saved_locations">Saved Locations</string>
+    <string name="no_saved_locations">No saved locations yet. Tap + to add one.</string>
+    <string name="location_card_description">%1$s: %2$s</string>
+    <string name="delete_location">Delete location</string>
+    <string name="delete_location_confirmation">Are you sure you want to delete %1$s?</string>
+    <string name="location_name">Location name</string>
+    <string name="location_description">Description</string>
+    <string name="coordinates">Coordinates: %1$.4f, %2$.4f</string>
+    <string name="coordinates_format">%1$.4f, %2$.4f</string>
+</resources>
