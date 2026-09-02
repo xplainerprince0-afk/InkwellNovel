@@ -20,7 +20,7 @@ fun CharactersScreen(
     onNavigateBack: () -> Unit,
     viewModel: CharactersViewModel = viewModel()
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
         topBar = { TopAppBar(title = { Text("Characters") }) },

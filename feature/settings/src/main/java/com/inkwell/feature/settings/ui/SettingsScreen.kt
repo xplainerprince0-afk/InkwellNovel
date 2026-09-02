@@ -14,7 +14,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 fun SettingsScreen(
     viewModel: SettingsViewModel = viewModel()
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
         topBar = { TopAppBar(title = { Text("Settings") }) }

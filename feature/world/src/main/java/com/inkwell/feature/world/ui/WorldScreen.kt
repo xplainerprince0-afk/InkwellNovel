@@ -20,7 +20,7 @@ fun WorldScreen(
     onNavigateBack: () -> Unit,
     viewModel: WorldViewModel = viewModel()
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
         topBar = { TopAppBar(title = { Text("World Building") }) },

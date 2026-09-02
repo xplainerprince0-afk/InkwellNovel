@@ -16,7 +16,7 @@ fun EditorScreen(
     onNavigateBack: () -> Unit,
     viewModel: EditorViewModel = viewModel()
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
         topBar = {
