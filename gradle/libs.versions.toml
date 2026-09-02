@@ -66,7 +66,7 @@ mlkit-text-recognition = { group = "com.google.mlkit", name = "text-recognition"
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-services-location" }
 
 # Maps
-maps-utils = { group = "com.google.maps.android", name = "maps-utils-ktx", version = "3.8.2" }
+maps-utils = { group = "com.google.maps.android", name = "maps-utils-ktx", version = "5.1.1" }
 
 # Media3
 media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3" }
